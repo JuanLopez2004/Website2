@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaHackerrank } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaHackerrank, FaFileAlt} from "react-icons/fa";
 
 type IntroBodyProps = {
     title: string;
@@ -27,7 +27,7 @@ export default function Hero({
                 padding: 0; 
                 background: ${whiteBg ? "#fff" : "transparent"};
                 width: 100%;
-                max-width: 1500px; /* scale inward like the header */
+                max-width: 2800px; /* scale inward like the header */
                 margin: 0 auto;
                 height: 360px; /* slightly shorter */
                 z-index: 1;
@@ -108,7 +108,12 @@ export default function Hero({
                             <a href={link3} target="_blank" rel="noopener noreferrer" className="hero-link-icon" title="HackerRank">
                                 <FaHackerrank />
                             </a>
-                        )}
+                        )}   
+                         {link4 && (
+                             <a href={link4} target="_blank" rel="noopener noreferrer" className="hero-link-icon" title="Resume">
+                                 <FaFileAlt />
+                             </a>
+                             )}
                     </div>
                 </div>
             </div>

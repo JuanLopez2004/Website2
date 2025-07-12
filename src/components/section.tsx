@@ -12,6 +12,7 @@ type IntroBodyProps = {
     link2?: string;
     link3?: string;
     link4?: string;
+    link1Label?: string; 
 };
 
 export default function Section({
@@ -26,6 +27,7 @@ export default function Section({
     link2,
     link3,
     link4,
+    link1Label,
 }: IntroBodyProps) {
     return (
         <>
@@ -34,8 +36,8 @@ export default function Section({
                     height: 200px;
                     width: 100%;
                     padding: 1rem 1rem;
-margin: 1rem auto;
- display: flex;
+                    margin: 1rem auto;
+                    display: flex;
                     align-items: center;
                     justify-content: space-between;
                     background: ${whiteBg ? "#fff" : "transparent"};
@@ -81,7 +83,7 @@ margin: 1rem auto;
 
                 .section-paragraph {
                     margin-bottom: 0.3rem;
-                    font-size: 0.95rem;
+                    font-size: 1.95rem;
                     color: #444;
                 }
 
@@ -111,7 +113,7 @@ margin: 1rem auto;
                     {content3 && <p className="section-paragraph">{content3}</p>}
 
                     <div className="section-links">
-                        {link1 && <a href={link1}>Link 1</a>}
+                        {link1 && <a href={link1}>{link1Label || "Link 1"}</a>}
                         {link2 && <a href={link2}>Link 2</a>}
                         {link3 && <a href={link3}>Link 3</a>}
                         {link4 && <a href={link4}>Link 4</a>}
