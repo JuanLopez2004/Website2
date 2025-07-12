@@ -5,6 +5,7 @@ export type Project = {
   description: string;
   imageSrc: string;
   link: string;
+  website?: string;
 };
 
 type ShowcaseProps = {
@@ -16,15 +17,14 @@ export default function Showcase({ projects }: ShowcaseProps) {
     <div
       style={{
         padding: "1rem",
-        zIndex:1,
-
+        zIndex: 1,
       }}
     >
       <h2
         style={{
           textAlign: "center",
           fontSize: "2rem",
-          marginTop: "0", 
+          marginTop: "0",
           color: "black",
         }}
       >
@@ -36,11 +36,11 @@ export default function Showcase({ projects }: ShowcaseProps) {
           display: "flex",
           justifyContent: "center",
           gap: "1rem",
-          marginBottom:"2rem",
+          marginBottom: "2rem",
           flexWrap: "wrap",
         }}
       >
-        {projects.map(({ title, description, imageSrc, link }) => (
+        {projects.map(({ title, description, imageSrc, link, website }) => (
           <div
             key={title}
             style={{
@@ -62,9 +62,16 @@ export default function Showcase({ projects }: ShowcaseProps) {
             />
             <div style={{ padding: "1rem", flexGrow: 1 }}>
               <h3 style={{ margin: "0 0 0.5rem 0" }}>{title}</h3>
-              <p style={{ margin: 0, flexGrow: 1 }}>{description}</p>
+              <p style={{ margin: 0 }}>{description}</p>
             </div>
-            <div style={{ padding: "0 1rem 1rem 1rem" }}>
+            <div
+              style={{
+                padding: "0 1rem 1rem 1rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.25rem",
+              }}
+            >
               <a
                 href={link}
                 target="_blank"
@@ -75,8 +82,22 @@ export default function Showcase({ projects }: ShowcaseProps) {
                   fontWeight: "bold",
                 }}
               >
-                View →
+                View Code →
               </a>
+              {website && (
+                <a
+                  href={website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#28a745",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Visit Site →
+                </a>
+              )}
             </div>
           </div>
         ))}

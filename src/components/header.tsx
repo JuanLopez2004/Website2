@@ -69,10 +69,10 @@ export default function Header() {
                     <span className="header-title">Juan Lopez</span>
                 </div>
                 <nav className="header-nav">
-                        <Link href="#Skills">Skills</Link>
-                        <Link href="#Work">Work</Link>
-                        <Link href="#Involvement">Involvement</Link>
-                        <Link href="#Projects">Projects</Link>
+                        <Link href="/#Skills">Skills</Link>
+                        <Link href="/#Work">Work</Link>
+                        <Link href="/Involvement">Involvement</Link>
+                        <Link href="/projects">Projects</Link>
                         <Link href="/Blog">Blog</Link>
                 </nav>
               </div>

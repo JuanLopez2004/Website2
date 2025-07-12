@@ -9,35 +9,35 @@ import Showcase, { Project } from '@/components/showcase';
 
 //Project Section
 const projects: Project[] = [
-  {
+   {
     title: "GooseBot",
     description: "General Discord Bot built with DiscordPY",
     imageSrc: "https://i.ibb.co/C5YhCYnN/Picsart-25-06-17-02-56-28-663.jpg",
-    link: "https://github.com/JuanLopez2004/project-one",
+    link: "https://github.com/JuanLopez2004/discord-goosebot",
   },
   {
     title: "Ryan's Parts Commerce Site",
     description: "Junior Year Software Eng Project built in ReactJS, NodeJs",
     imageSrc: "https://i.imgur.com/SvVdlsC.png",
-    link: "https://github.com/JuanLopez2004/project-two",
+    link: "https://github.com/JuanLopez2004/CSCI-467",
   },
   {
-    title: "Karaoke Site",
-    description: "Sophomore Year Databases Project built in HTML/CSS/PHP",
-    imageSrc: "https://students.cs.niu.edu/~z1952526/winans.PNG",
-    link: "https://github.com/JuanLopez2004/project-three",
+    title: "NIU ACM Website",
+    description: "ACM Departmental Website Programmed with ReactJS, TypeScript. Serverside Development with NextJS with nixOS/Bun toolkit",
+    imageSrc: "https://i.imgur.com/bscMhK0.png",
+    link: "https://github.com/niu-acm/niu-acm-website",
   },
   {
     title: "2nd Portfolio Site",
     description: "This Very Site. Built with TypeScript, ReactJS, and NextJS",
     imageSrc: "https://images.pling.com/img/00/00/04/47/10/1114759/44869-1.jpg",
-    link: "https://github.com/JuanLopez2004/project-three",
+    link: "https://github.com/JuanLopez2004/Website2",
   },
    {
     title: "More Projects",
     description: "Click View to View More Projects",
     imageSrc: "https://i.imgur.com/viSEu7f.jpeg",
-    link: "https://github.com/JuanLopez2004/project-three",
+    link: "/projects",
   },
 ];
 
