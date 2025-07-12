@@ -22,23 +22,36 @@ type SplitSectionProps = {
   whiteBg?: boolean;
 };
 
-export default function SplitSection({title1,content1,content2, content5, content6, title2,content3,content4,link1Text,link1Href,link2Text,link2Href,whiteBg,large}: SplitSectionProps) {
+export default function SplitSection({
+  title1,
+  content1,
+  content2,
+  content5,
+  content6,
+  title2,
+  content3,
+  content4,
+  link1Text,
+  link1Href,
+  link2Text,
+  link2Href,
+  whiteBg,
+}: SplitSectionProps) {
   return (
     <>
       <style>{`
         .sectionbody {
-          width: 100%;
-          max-width: 115rem;
-          margin: 2rem auto;
-          padding: 2rem;
-          background: ${whiteBg ? "#fff" : "transparent"};
-          box-sizing: border-box;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          gap: 2rem;
-          min-height: 350px;
-        }
+        height: 200px;
+        width: 100%;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: ${whiteBg ? "#fff" : "transparent"};
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 
         .text-block {
           width: 50%;
@@ -50,48 +63,57 @@ export default function SplitSection({title1,content1,content2, content5, conten
         }
 
         .section-title {
-          font-size: 2rem;
+          font-size: 1.2rem;
           font-weight: bold;
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
           color: #222;
         }
 
         .section-paragraph {
-          margin-bottom: 1rem;
-          font-size: 1.5rem;
+          margin-bottom: 0.3rem;
+          font-size: 0.95rem;
           color: #444;
           white-space: pre-wrap;
           word-break: break-word;
         }
 
         .section-link {
-          margin-top: auto; /* Push the link to the bottom */
+          margin-top: 0.5rem;
+          font-size: 0.9rem;
           font-weight: 600;
           color: #007BFF;
           text-decoration: none;
           transition: color 0.3s ease;
+        }
 
+        .section-link:hover {
+          color: #0056b3;
+        }
       `}</style>
 
       <section className="sectionbody">
-
         <div className="text-block">
           <h2 className="section-title">{title1}</h2>
-          <p className="section-paragraph">{content1}</p>
-
+          {content1 && <p className="section-paragraph">{content1}</p>}
           {content2 && <p className="section-paragraph">{content2}</p>}
-        {content2 && <p className="section-paragraph">{content5}</p>}
-
-          <a href={link1Href} className="section-link">{link1Text}</a>
+          {content5 && <p className="section-paragraph">{content5}</p>}
+          {link1Text && link1Href && (
+            <a href={link1Href} className="section-link">
+              {link1Text}
+            </a>
+          )}
         </div>
 
         <div className="text-block">
           <h2 className="section-title">{title2}</h2>
           <p className="section-paragraph">{content3}</p>
           {content4 && <p className="section-paragraph">{content4}</p>}
-        {content2 && <p className="section-paragraph">{content6}</p>}
-
-          <a href={link2Href} className="section-link">{link2Text}</a>
+          {content6 && <p className="section-paragraph">{content6}</p>}
+          {link2Text && link2Href && (
+            <a href={link2Href} className="section-link">
+              {link2Text}
+            </a>
+          )}
         </div>
       </section>
     </>

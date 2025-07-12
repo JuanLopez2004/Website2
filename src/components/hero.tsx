@@ -19,68 +19,71 @@ export default function Hero({
 }: IntroBodyProps) {
     return (
         <>
-            <style>{`
-                .hero { 
-                    display: flex;
-                    align-items: stretch;
-                    justify-content: center;
-                    padding: 0; 
-                    background: ${whiteBg ? "#fff" : "transparent"};
-                    width: 100%;
-                    height: 500px; 
-                    z-index: 1;
-                }
-                .hero-image-container {
-                    width: 50%;
-                    height: 100%;
-                    display: flex;
-                    align-items: stretch;
-                    justify-content: flex-end;
-                }
-                .hero-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    display: block;
-                }
-                .hero-content {
-                    width: 50%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    padding: 3rem 3rem;
-                    box-sizing: border-box;
-                }
-                .hero-title {
-                    font-size: 2.2rem;
-                    font-weight: bold;
-                    margin-bottom: 1rem;
-                    color: #222;
-                }
-                .hero-text {
-                    font-size: 1.4rem;
-                    color: #444;
-                }
-                .hero-text-gap {
-                    margin-top: 1rem;
-                }
-                    
-                .hero-links {
-                    display: flex;
-                    gap: 1.2rem;
-                    margin-top: 2rem;
-                }
-                .hero-link-icon {
-                    color: #444;
-                    font-size: 2rem;
-                    transition: color 0.2s;
-                }
-                .hero-link-icon:hover {
-                    color: #4856a3;
-                }
-            `}</style>
+         <style>{`
+            .hero { 
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
+                padding: 0; 
+                background: ${whiteBg ? "#fff" : "transparent"};
+                width: 100%;
+                max-width: 1500px; /* scale inward like the header */
+                margin: 0 auto;
+                height: 360px; /* slightly shorter */
+                z-index: 1;
+            }
+            .hero-image-container {
+                width: 45%; /* slightly narrower */
+                height: 100%;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-end;
+            }
+            .hero-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .hero-content {
+                width: 55%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 2rem;
+                box-sizing: border-box;
+            }
+            .hero-title {
+                font-size: 1.8rem; /* scaled down */
+                font-weight: bold;
+                margin-bottom: 1rem;
+                color: #222;
+            }
+            .hero-text {
+                font-size: 1.1rem; /* scaled down */
+                color: #444;
+            }
+            .hero-text-gap {
+                margin-top: 0.8rem;
+            }
+                
+            .hero-links {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+            .hero-link-icon {
+                color: #444;
+                font-size: 1.6rem; /* scaled down */
+                transition: color 0.2s;
+            }
+            .hero-link-icon:hover {
+                color: #4856a3;
+            }
+        `}</style>
+
             <div className="hero">
                 <div className="hero-image-container">
                     <img src={imageSrc} alt={altText} className="hero-image" />

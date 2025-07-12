@@ -14,30 +14,41 @@ type IntroBodyProps = {
     link4?: string;
 };
 
-export default function Section({title,content,content2,content3,imageSrc,altText,whiteBg,link1,link2,link3,link4, }: IntroBodyProps) {
+export default function Section({
+    title,
+    content,
+    content2,
+    content3,
+    imageSrc,
+    altText,
+    whiteBg,
+    link1,
+    link2,
+    link3,
+    link4,
+}: IntroBodyProps) {
     return (
         <>
             <style>{`
                 .sectionbody {
-                    height: 350px;  
+                    height: 200px;
                     width: 100%;
-                    padding: 2rem;
-                    margin: 2rem auto; 
-                    max-width: 115rem;
-                    display: flex;
+                    padding: 1rem 1rem;
+margin: 1rem auto;
+ display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    padding: 2rem;
                     background: ${whiteBg ? "#fff" : "transparent"};
                     position: relative;
                     z-index: 1;
+                    max-width: 1200px;
                 }
 
                 .section-image-wrapper {
                     background: #fff;
-                    padding: 1rem;
-                    height: 90%;
-                    width: 30%;
+                    padding: 0.5rem;
+                    height:90%;
+                    width: 20%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -47,36 +58,37 @@ export default function Section({title,content,content2,content3,imageSrc,altTex
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    border-radius: 10px;
+                    border-radius: 6px;
                 }
 
                 .section-content {
-                    width: 100%;
+                    width: 78%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-start; 
+                    justify-content: flex-start;
                     align-items: flex-start;
-                    padding-left: 2rem;
+                    padding-left: 1.2rem;
                     box-sizing: border-box;
                 }
 
                 .section-title {
-                    font-size: 2.5rem;
+                    font-size: 1.2rem;
                     font-weight: bold;
-                    margin-bottom: 1rem;
+                    margin-bottom: 0.5rem;
                     color: #222;
                 }
 
                 .section-paragraph {
-                    margin-bottom: 12rem;
-                    font-size: 1.5rem;
+                    margin-bottom: 0.3rem;
+                    font-size: 0.95rem;
                     color: #444;
                 }
 
                 .section-links a {
                     display: inline-block;
-                    margin-right: 1rem;
+                    margin-right: 0.75rem;
+                    font-size: 0.9rem;
                     color: #007BFF;
                     text-decoration: none;
                     transition: color 0.3s ease;

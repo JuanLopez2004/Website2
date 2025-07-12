@@ -4,6 +4,8 @@ import Background from '@/components/background';
 import Hero from '@/components/hero';
 import Section from '@/components/section';
 import SplitSection from '@/components/splitsection';
+import Showcase from '@/components/showcase';
+
 
 export default function Home() {
     return (
@@ -21,7 +23,7 @@ export default function Home() {
             <main
                 style={{
                     flex: 1,
-                    gap: "1.5rem"
+                    gap: "1rem"
                 }}
             >
                 <section style={{ width: "100%", display: "flex", justifyContent: "center" }}>
@@ -42,13 +44,15 @@ export default function Home() {
                 <section style={{ width: "100%", display: "flex", justifyContent: "center" }}>
                     <Section 
                     title="Biography" 
-                    content="Section 1 content goes here. This section can include more details about your skills or projects." 
-                    imageSrc="https://c4.wallpaperflare.com/wallpaper/750/507/586/computers-linux-wallpaper-preview.jpg"
+                    content="I am a Senior at NIU! I am in my fourth year learning Computer Science. I have a passion for full-stack web development and data science. I am the Chair of the NIU ACM Chapter, where I help organize fun events and educational workshops for students. I believe in an equitable tech community, and I strive to make tech accessible to everyone. I am an avid fan of College Football, Team Fortresss 2, and Adult Swim."
+
+                    imageSrc="https://i.ibb.co/hRMFKRWw/IMG-20250711-191116-406.jpg"
                     altText="tux"
                     whiteBg={true}
                     />
                 </section>
-
+                
+                <div id="Skills">
                 <SplitSection
                     title1="Skills"
                     content1="C++, SQL, ReactJS, TypeScript, Python,"
@@ -58,12 +62,15 @@ export default function Home() {
                     content4="MySQL, Vite, Windows, Linux"
                     whiteBg={true}
                 />
+                </div>
                 
+                <div id="Work">
                 <section style={{ width: "100%", display: "flex", justifyContent: "center" }}>
                 <SplitSection
                     title1="Work Experience"
                     content1="ResTech Help Desk Technician - Northern Illinois University · Part-time, Jun 2025 - Present"
-                    content2="DeKalb, Illinois, United States · On-site"
+                    content2="DeKalb, Illinois, United States"
+                    content5="· On-site"
                     title2="Description"
                     content3="Provide IT support to students and staff in the various NIU residence halls and the Student Center, including laptop troubleshooting, hardware/software support, Computer Imaging, Powershell, and Assistance."
                     content4="Tools Learned: Powershell, Windows 11 Support, GitLab"
@@ -71,6 +78,7 @@ export default function Home() {
                     large={true}
                 />
                 </section>
+                </div>
 
              
                 </main>

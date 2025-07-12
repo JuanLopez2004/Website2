@@ -5,3 +5,6 @@ body {
   padding: 0;
   font-family: Consolas, 'Courier New', monospace;
 }
+html {
+  scroll-padding-top: 200px; 
+}

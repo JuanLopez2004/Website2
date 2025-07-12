@@ -19,28 +19,39 @@ export default function Footer() {
                     font-size: 1.2rem;
                     text-align: center;
               }
+                .footer-bottom {
+                    margin-top: auto; 
+                    text-align: center;
+                    }
+
               .footer-link {
                     color: white;
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     text-decoration: none;
-                    margin-top: 0.5rem;
+                    margin-top: 0.7rem;
               }
-              .footer-link:hover {
-    
-              }
+              .footer-nav a:hover {
+                        color:rgb(255, 255, 255);
+                        text-decoration: underline;
+                        fade-in: 0.3s;
+                  }
             `}</style>
 
             <footer className="footer">
-                <span className="footer-text">
-                    Copyright © 2025 Juan Lopez
-                </span>
-                <a
-                    href="mailto:jlopezcs04@gmail.com"
-                    className="footer-link"
-                >
-                    Contact
-                </a>
-            </footer>
+    <div className="footer-nav">
+        <span className="footer-text">
+            © 2025 Juan Lopez
+        </span>
+        <div className="footer-bottom">
+            <a
+                href="mailto:jlopezcs04@gmail.com"
+                className="footer-link"
+            >
+                Contact
+            </a>
+        </div>
+    </div>
+</footer>
         </>
     );
 }
