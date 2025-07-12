@@ -13,22 +13,99 @@ type IntroBodyProps = {
     link3?: string;
     link4?: string;
 };
-export default function Hero({
-    title, content, content2, content3, imageSrc, altText, whiteBg, link1, link2, link3, link4}: IntroBodyProps) {
+
+export default function Section({title,content,content2,content3,imageSrc,altText,whiteBg,link1,link2,link3,link4, }: IntroBodyProps) {
     return (
         <>
             <style>{`
                 .sectionbody {
+                    height: 350px;  
+                    width: 100%;
+                    padding: 2rem;
+                    margin: 2rem auto; 
+                    max-width: 115rem;
                     display: flex;
-                    align-items: stretch;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 2rem;
+                    background: ${whiteBg ? "#fff" : "transparent"};
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .section-image-wrapper {
+                    background: #fff;
+                    padding: 1rem;
+                    height: 90%;
+                    width: 30%;
+                    display: flex;
+                    align-items: center;
                     justify-content: center;
-                    
-                    }
+                }
+
+                .section-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                .section-content {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start; 
+                    align-items: flex-start;
+                    padding-left: 2rem;
+                    box-sizing: border-box;
+                }
+
+                .section-title {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                    color: #222;
+                }
+
+                .section-paragraph {
+                    margin-bottom: 12rem;
+                    font-size: 1.5rem;
+                    color: #444;
+                }
+
+                .section-links a {
+                    display: inline-block;
+                    margin-right: 1rem;
+                    color: #007BFF;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
+                .section-links a:hover {
+                    color: #0056b3;
+                }
             `}</style>
 
-           
+            <header className="sectionbody">
+                <div className="section-image-wrapper">
+                    <img src={imageSrc} alt={altText} className="section-image" />
+                </div>
+
+                <div className="section-content">
+                    <h1 className="section-title">{title}</h1>
+                    <p className="section-paragraph">{content}</p>
+                    {content2 && <p className="section-paragraph">{content2}</p>}
+                    {content3 && <p className="section-paragraph">{content3}</p>}
+
+                    <div className="section-links">
+                        {link1 && <a href={link1}>Link 1</a>}
+                        {link2 && <a href={link2}>Link 2</a>}
+                        {link3 && <a href={link3}>Link 3</a>}
+                        {link4 && <a href={link4}>Link 4</a>}
+                    </div>
+                </div>
+            </header>
         </>
-
-
     );
 }

@@ -2,6 +2,8 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Background from '@/components/background';
 import Hero from '@/components/hero';
+import Section from '@/components/section';
+import SplitSection from '@/components/splitsection';
 
 export default function Home() {
     return (
@@ -37,14 +39,41 @@ export default function Home() {
                     />
                 </section>
 
-               
+                <section style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+                    <Section 
+                    title="Biography" 
+                    content="Section 1 content goes here. This section can include more details about your skills or projects." 
+                    imageSrc="https://c4.wallpaperflare.com/wallpaper/750/507/586/computers-linux-wallpaper-preview.jpg"
+                    altText="tux"
+                    whiteBg={true}
+                    />
+                </section>
 
+                <SplitSection
+                    title1="Skills"
+                    content1="C++, SQL, ReactJS, TypeScript, Python,"
+                    content2="HTML, CSS, NextJS, Could do Java if forced"
+                    title2="Dev Tools"
+                    content3="VScode, Git, GitHub, GitLab,"
+                    content4="MySQL, Vite, Windows, Linux"
+                    whiteBg={true}
+                />
+                
+                <section style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+                <SplitSection
+                    title1="Work Experience"
+                    content1="ResTech Help Desk Technician - Northern Illinois University · Part-time, Jun 2025 - Present"
+                    content2="DeKalb, Illinois, United States · On-site"
+                    title2="Description"
+                    content3="Provide IT support to students and staff in the various NIU residence halls and the Student Center, including laptop troubleshooting, hardware/software support, Computer Imaging, Powershell, and Assistance."
+                    content4="Tools Learned: Powershell, Windows 11 Support, GitLab"
+                    whiteBg={true}
+                    large={true}
+                />
+                </section>
 
-
-
-
-
-                 </main>
+             
+                </main>
 
             <Footer />
         </div>
