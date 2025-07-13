@@ -12,8 +12,12 @@ export default function Header() {
                         color: white;
                         box-sizing: border-box;
                         position: relative;
-                        z-index: 1;
                         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                         position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
                   }
                   .header-left {
                         display: flex;

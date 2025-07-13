@@ -49,7 +49,7 @@ export default function Section({
                 .section-image-wrapper {
                     background: #fff;
                     padding: 0.5rem;
-                    height:90%;
+                    height:100%;
                     width: 20%;
                     display: flex;
                     align-items: center;

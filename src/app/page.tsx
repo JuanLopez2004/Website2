@@ -6,10 +6,9 @@ import Section from '@/components/section';
 import SplitSection from '@/components/splitsection';
 import Showcase, { Project } from '@/components/showcase';
 
-
-//Project Section
+//Projects Section
 const projects: Project[] = [
-   {
+  {
     title: "GooseBot",
     description: "General Discord Bot built with DiscordPY",
     imageSrc: "https://i.ibb.co/C5YhCYnN/Picsart-25-06-17-02-56-28-663.jpg",
@@ -23,7 +22,8 @@ const projects: Project[] = [
   },
   {
     title: "NIU ACM Website",
-    description: "ACM Departmental Website Programmed with ReactJS, TypeScript. Serverside Development with NextJS with nixOS/Bun toolkit",
+    description:
+      "ACM Departmental Website Programmed with ReactJS, TypeScript. Serverside Development with NextJS with nixOS/Bun toolkit",
     imageSrc: "https://i.imgur.com/bscMhK0.png",
     link: "https://github.com/niu-acm/niu-acm-website",
   },
@@ -33,7 +33,7 @@ const projects: Project[] = [
     imageSrc: "https://images.pling.com/img/00/00/04/47/10/1114759/44869-1.jpg",
     link: "https://github.com/JuanLopez2004/Website2",
   },
-   {
+  {
     title: "More Projects",
     description: "Click View to View More Projects",
     imageSrc: "https://i.imgur.com/viSEu7f.jpeg",
@@ -60,6 +60,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           gap: '1rem',
+          paddingTop: '80px', //manual offset for hero section. change this if changing hero size 
         }}
       >
         <section style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -84,7 +85,6 @@ export default function Home() {
             content="I am a Senior at NIU! I am in my fourth year learning Computer Science. I have a passion for full-stack web development and data science. I am the Chair of the NIU ACM Chapter, where I help organize fun events and educational workshops for students. I believe in an equitable tech community, and I strive to make tech accessible to everyone. I am an avid fan of College Football, Team Fortress 2, and Adult Swim."
             imageSrc="https://i.ibb.co/hRMFKRWw/IMG-20250711-191116-406.jpg"
             altText="tux"
-            whiteBg={true}
           />
         </section>
 
@@ -115,7 +115,7 @@ export default function Home() {
             />
           </section>
         </div>
-        
+
          <div id="Involvement">
          <section style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <Section
@@ -131,11 +131,10 @@ export default function Home() {
         </section>
         </div>
 
-        {/* Showcase Section */}
         <div id="Projects">
-        <section style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-          <Showcase projects={projects} />
-        </section>
+          <section style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Showcase projects={projects} />
+          </section>
         </div>
       </main>
 
