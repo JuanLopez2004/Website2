@@ -106,7 +106,7 @@ export default function Home() {
               title1="Work Experience"
               content1="ResTech Help Desk Technician - Northern Illinois University · Part-time, Jun 2025 - Present"
               content2="DeKalb, Illinois, United States"
-              content5="· On-site"
+              content5="On-site"
               title2="Description"
               content3="Provide IT support to students and staff in the various NIU residence halls and the Student Center, including laptop troubleshooting, hardware/software support, Computer Imaging, Powershell, and Assistance."
               content4="Tools Learned: Powershell, Windows 11 Support, GitLab"

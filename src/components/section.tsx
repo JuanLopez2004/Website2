@@ -93,6 +93,7 @@ export default function Section({
                     margin-bottom: 0.3rem;
                     font-size: 1.95rem;
                     color: white;
+                    font-family: Arial, Helvetica, sans-serif;
                 }
 
                 .section-links a {

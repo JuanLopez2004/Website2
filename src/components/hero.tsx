@@ -54,6 +54,8 @@ export default function Hero({
                 align-items: flex-start;
                 padding: 2rem;
                 box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+
             }
             .hero-title {
                 font-size: 1.8rem; /* scaled down */

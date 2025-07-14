@@ -13,11 +13,12 @@ export default function Header() {
                         box-sizing: border-box;
                         position: relative;
                         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-                         position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 1000;
+						
                   }
                   .header-left {
                         display: flex;
@@ -31,6 +32,7 @@ export default function Header() {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+						
                   }
                   .header-logo {
                         height: 50px;
@@ -63,15 +65,20 @@ export default function Header() {
                         opacity: 0.6;
                   }
             `}</style>
+
             <header className="header">
               <div className="header-container">
                 <div className="header-left">
+
                    <Link href="/">
                       <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png"
                       alt="Logo" className="header-logo" />
                    </Link>
+
                     <span className="header-title">Juan Lopez</span>
+
                 </div>
+				
                 <nav className="header-nav">
                         <Link href="/#Skills">Skills</Link>
                         <Link href="/#Work">Work</Link>

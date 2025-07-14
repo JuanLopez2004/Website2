@@ -47,7 +47,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
             style={{
               border: "1px solid #ccc",
               borderRadius: 8,
-              width: 176,
+              width: 225,
               backgroundColor: "white",
               boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
               overflow: "hidden",

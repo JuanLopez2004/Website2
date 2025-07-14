@@ -48,6 +48,8 @@ export default function BlogPostContainer({ title, desc, image1, image2, image3,
         .blog-desc {
           font-size: 1rem;
           gap: 0.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+
         }
 
         .blog-section {
@@ -55,6 +57,8 @@ export default function BlogPostContainer({ title, desc, image1, image2, image3,
           align-items: flex-start;
           gap: 1rem;
           font-size: 1.2rem;
+          font-family: Arial, Helvetica, sans-serif;
+
         }
 
         .blog-section img {

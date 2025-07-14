@@ -75,6 +75,7 @@ export default function SplitSection({
           color: #444;
           white-space: pre-wrap;
           word-break: break-word;
+          font-family: Arial, Helvetica, sans-serif;
         }
 
         .section-link {
