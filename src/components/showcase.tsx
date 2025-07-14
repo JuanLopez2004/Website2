@@ -43,6 +43,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
         {projects.map(({ title, description, imageSrc, link, website }) => (
           <div
             key={title}
+            className="project-card"
             style={{
               border: "1px solid #ccc",
               borderRadius: 8,
@@ -53,6 +54,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
               display: "flex",
               flexDirection: "column",
               zIndex: 1,
+              transition: "all 0.3s ease",
             }}
           >
             <img
@@ -102,6 +104,13 @@ export default function Showcase({ projects }: ShowcaseProps) {
           </div>
         ))}
       </div>
+
+      <style>{`
+        .project-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+        }
+      `}</style>
     </div>
   );
 }

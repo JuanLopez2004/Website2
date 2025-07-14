@@ -12,7 +12,7 @@ type IntroBodyProps = {
     link2?: string;
     link3?: string;
     link4?: string;
-    link1Label?: string; 
+    link1Label?: string;
 };
 
 export default function Section({
@@ -40,31 +40,38 @@ export default function Section({
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    background: ${whiteBg ? "#fff" : "transparent"};
+                    background: ${whiteBg ? "#fff" : "#4856a3"};
                     position: relative;
                     z-index: 1;
                     max-width: 1200px;
+                    transition: all 0.3s ease;
+                    border-radius: 8px;
+                }
+
+                .sectionbody:hover {
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                    transform: translateY(-2px);
                 }
 
                 .section-image-wrapper {
-                    background: #fff;
-                    padding: 0.5rem;
-                    height:100%;
-                    width: 20%;
+                    padding: 0;
+                    height: 100%;
+                    width: 25%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    border-radius: 6px;
+                    overflow: hidden;
                 }
 
                 .section-image {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    border-radius: 6px;
                 }
 
                 .section-content {
-                    width: 78%;
+                    width: 72%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
@@ -72,33 +79,35 @@ export default function Section({
                     align-items: flex-start;
                     padding-left: 1.2rem;
                     box-sizing: border-box;
+                    color: white;
                 }
 
                 .section-title {
                     font-size: 1.2rem;
                     font-weight: bold;
                     margin-bottom: 0.5rem;
-                    color: #222;
+                    color: white;
                 }
 
                 .section-paragraph {
                     margin-bottom: 0.3rem;
                     font-size: 1.95rem;
-                    color: #444;
+                    color: white;
                 }
 
                 .section-links a {
                     display: inline-block;
                     margin-right: 0.75rem;
                     font-size: 0.9rem;
-                    color: #007BFF;
+                    color: #007bffff;
                     text-decoration: none;
                     transition: color 0.3s ease;
                 }
 
                 .section-links a:hover {
-                    color: #0056b3;
+                    color: #7390f7ff;
                 }
+
             `}</style>
 
             <header className="sectionbody">
