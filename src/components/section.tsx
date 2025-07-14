@@ -15,20 +15,7 @@ type IntroBodyProps = {
     link1Label?: string;
 };
 
-export default function Section({
-    title,
-    content,
-    content2,
-    content3,
-    imageSrc,
-    altText,
-    whiteBg,
-    link1,
-    link2,
-    link3,
-    link4,
-    link1Label,
-}: IntroBodyProps) {
+export default function Section({ title, content, content2, content3, imageSrc, altText, whiteBg,link1, link2, link3, link4, link1Label}: IntroBodyProps) {
     return (
         <>
             <style>{`
@@ -46,6 +33,7 @@ export default function Section({
                     max-width: 1200px;
                     transition: all 0.3s ease;
                     border-radius: 8px;
+                    
                 }
 
                 .sectionbody:hover {
@@ -90,10 +78,11 @@ export default function Section({
                 }
 
                 .section-paragraph {
-                    margin-bottom: 0.3rem;
-                    font-size: 1.95rem;
+                    margin-bottom: 1.2rem;
+                    font-size: 1.5rem;  
+                    line-height: 1.3;
                     color: white;
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family: "Segoe UI", Arial, sans-serif;
                 }
 
                 .section-links a {

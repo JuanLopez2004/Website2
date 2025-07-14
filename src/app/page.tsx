@@ -82,8 +82,9 @@ export default function Home() {
         <section style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <Section
             title="Biography"
-            content="I am a Senior at NIU! I am in my fourth year learning Computer Science. I have a passion for full-stack web development and data science. I am the Chair of the NIU ACM Chapter, where I help organize fun events and educational workshops for students. I believe in an equitable tech community, and I strive to make tech accessible to everyone. I am an avid fan of College Football, Team Fortress 2, and Adult Swim."
-            imageSrc="https://i.ibb.co/hRMFKRWw/IMG-20250711-191116-406.jpg"
+            content="I am a Senior at NIU! I am in my fourth year learning Computer Science. I have a passion for full-stack web development and data science. I am the Chair of the NIU ACM Chapter, where I help organize fun events and educational workshops for students."
+            content2="I believe in an equitable tech community, and I strive to make tech accessible to everyone. I am an avid fan of College Football, Team Fortress 2, and Adult Swim."
+			imageSrc="https://i.ibb.co/hRMFKRWw/IMG-20250711-191116-406.jpg"
             altText="tux"
           />
         </section>
@@ -124,7 +125,7 @@ export default function Home() {
             content2="If you are interested in reading about our work, my contributions, and our event history click below"
             imageSrc="https://i.imgur.com/pkz8jYe.png"
             altText="tux"
-            link1="https://www.linkedin.com/in/juan-lopez-6278bb234/"
+            link1="/Involvement"
             link1Label="View Involvement Page"
             whiteBg={true}
           />

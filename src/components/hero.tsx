@@ -6,6 +6,9 @@ type IntroBodyProps = {
     content: string;
     content2?: string;
     content3?: string;
+    content4?: string;
+    content5?: string;
+    content6?: string;
     imageSrc: string;
     altText: string;
     whiteBg?: boolean;
@@ -15,8 +18,7 @@ type IntroBodyProps = {
     link4?: string;
 };
 export default function Hero({
-    title, content, content2, content3, imageSrc, altText, whiteBg, link1, link2, link3, link4
-}: IntroBodyProps) {
+    title, content, content2, content3, content4, content5, content6, imageSrc, altText, whiteBg, link1, link2, link3, link4}: IntroBodyProps) {
     return (
         <>
          <style>{`
@@ -95,6 +97,9 @@ export default function Hero({
                     <div className="hero-text">{content}</div>
                     <div className="hero-text hero-text-gap">{content2}</div>
                     <div className="hero-text hero-text-gap">{content3}</div>
+                    <div className="hero-text hero-text-gap">{content4}</div>
+                    <div className="hero-text hero-text-gap">{content5}</div>
+                    <div className="hero-text hero-text-gap">{content6}</div>
                     <div className="hero-links">
                         {link1 && (
                             <a href={link1} target="_blank" rel="noopener noreferrer" className="hero-link-icon" title="GitHub">
