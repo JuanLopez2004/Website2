@@ -37,7 +37,7 @@ export default function Home() {
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
-          paddingTop: '80px', 
+          paddingTop: '100px', 
         }}
       >
       
