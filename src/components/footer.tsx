@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <>
             <style>{`
-              .footer {
+               .footer {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -14,7 +14,11 @@ export default function Footer() {
                     padding: 1rem 0;
                     position: relative;
                     z-index: 1;
-              }
+                    width: 100vw;
+                    left: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
               .footer-text {
                     font-size: 1.7rem;
                     text-align: center;

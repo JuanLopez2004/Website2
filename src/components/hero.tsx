@@ -41,32 +41,28 @@ export default function Hero({
                     display: flex;
                     align-items: stretch;
                     background: ${whiteBg ? "#fff" : "transparent"};
-                    width: 100%;
-                    max-width: 2500px;
-                    margin: 0 auto;
-                    height: auto;
-                    max-height: 500px;
+                    width: 100vw;
+                    height: 500px;
                     z-index: 1;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+                    /* Remove max-width and margin */
                 }
-
                 .hero-image-container {
-                    width: 45%;
+                    width: 50%;
                     height: 100%;
                     display: flex;
                     align-items: stretch;
                     justify-content: flex-end;
                 }
-
                 .hero-image {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     display: block;
                 }
-
                 .hero-content {
-                    width: 55%;
-                    height: auto;
+                    width: 50%;
+                    height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -84,7 +80,7 @@ export default function Hero({
                 }
 
                 .hero-text {
-                    font-size: clamp(1.4rem, 2.0vw, 2rem);
+                    font-size: clamp(1.4rem, 2.0vw, 1.9rem);
                     color: #444;
                 }
 

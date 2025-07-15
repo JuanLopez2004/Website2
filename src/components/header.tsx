@@ -4,9 +4,9 @@ export default function Header() {
     return (
         <>
             <style>{`
-                .header {
+               .header {
                     display: flex;
-                    padding: 1rem 1rem;
+                    padding: 1rem 0;
                     align-items: center;
                     background-color: #4856a3;
                     color: white;
@@ -21,11 +21,12 @@ export default function Header() {
 
                 .header-container {
                     width: 100%;
-                    max-width: 62.5rem;
+                    max-width: 90rem; /* Increased max-width for more space */
                     margin: 0 auto;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    padding: 0 3rem; /* More horizontal padding */
                 }
 
                 .header-left,
@@ -34,13 +35,13 @@ export default function Header() {
                     align-items: center;
                     height: 80px; 
                 }
-				
-				.header-left {
-                    gap: 0.5rem; 
-				}
+                
+                .header-left {
+                    gap: 1.2rem;
+                }
 
                 .header-logo {
-                    height: 50px;
+                    height: 70px; 
                     transition: opacity 0.3s ease;
                 }
 
@@ -49,10 +50,10 @@ export default function Header() {
                 }
 
                 .header-title {
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                     font-weight: bold;
                     letter-spacing: 0.5px;
-                    line-height: 50px; /* Match logo height */
+                    line-height: 70px; /* Match logo height */
                     display: flex;
                     align-items: center;
                 }
@@ -61,9 +62,9 @@ export default function Header() {
                     color: white;
                     text-decoration: none;
                     font-size: 1.1rem;
-                    margin: 0 0.7rem;
+                    margin: 0 1.3rem; /* More space between nav links */
                     transition: color 0.3s ease;
-                    line-height: 50px; /* Match alignment */
+                    line-height: 70px;
                 }
 
                 .header-nav a:hover {
