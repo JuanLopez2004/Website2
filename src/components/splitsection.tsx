@@ -99,6 +99,24 @@ export default function SplitSection({
   color: #0056b3;
 }
 
+@media (max-width: 900px) {
+				.sectionbody {
+					flex-direction: column;
+					padding: 1rem;
+					gap: 1rem;
+					max-width: 100%;
+				}
+				.text-block,
+				.section-content,
+				.section-image-wrapper {
+					width: 100% !important;
+					padding: 1rem !important;
+					min-width: 0;
+				}
+				.section-image {
+					max-height: 180px;
+				}
+				}
 
 
       `}</style>

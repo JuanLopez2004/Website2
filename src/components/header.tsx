@@ -5,72 +5,97 @@ export default function Header() {
         <>
             <style>{`
                .header {
-                    display: flex;
-                    padding: 1rem 0;
-                    align-items: center;
-                    background-color: #4856a3;
-                    color: white;
-                    box-sizing: border-box;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    z-index: 1000;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-                }
+                display: flex;
+                padding: 1rem 0;
+                align-items: center;
+                background-color: #4856a3;
+                color: white;
+                box-sizing: border-box;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
 
+            .header-container {
+                width: 100%;
+                max-width: 90rem;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 3rem;
+            }
+
+            .header-left,
+            .header-nav {
+                display: flex;
+                align-items: center;
+                height: 80px;
+            }
+
+            .header-left {
+                gap: 1.2rem;
+            }
+
+            .header-logo {
+                height: 70px;
+                transition: opacity 0.3s ease;
+            }
+
+            .header-title {
+                font-size: 1.6rem;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                line-height: 70px;
+                display: flex;
+                align-items: center;
+            }
+
+            .header-nav a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                margin: 0 1.3rem;
+                transition: color 0.3s ease;
+                line-height: 70px;
+            }
+
+            .header-nav a:hover {
+                color: rgb(255, 255, 255);
+                text-decoration: underline;
+            }
+
+            @media (max-width: 900px) {
                 .header-container {
-                    width: 100%;
-                    max-width: 90rem; /* Increased max-width for more space */
-                    margin: 0 auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 0 3rem; /* More horizontal padding */
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 1rem;
                 }
-
-                .header-left,
-                .header-nav {
-                    display: flex;
-                    align-items: center;
-                    height: 80px; 
-                }
-                
                 .header-left {
-                    gap: 1.2rem;
+                height: auto;
+                gap: 0.7rem;
                 }
-
                 .header-logo {
-                    height: 70px; 
-                    transition: opacity 0.3s ease;
+                height: 48px;
                 }
-
-                .header-logo:hover {
-                    opacity: 0.6;
-                }
-
                 .header-title {
-                    font-size: 1.6rem;
-                    font-weight: bold;
-                    letter-spacing: 0.5px;
-                    line-height: 70px; /* Match logo height */
-                    display: flex;
-                    align-items: center;
+                font-size: 1.1rem;
+                line-height: 48px;
                 }
-
+                .header-nav {
+                height: auto;
+                flex-wrap: wrap;
+                margin-top: 0.5rem;
+                }
                 .header-nav a {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 1.1rem;
-                    margin: 0 1.3rem; /* More space between nav links */
-                    transition: color 0.3s ease;
-                    line-height: 70px;
+                margin: 0 0.7rem 0.5rem 0;
+                font-size: 1rem;
+                line-height: 2.2rem;
                 }
-
-                .header-nav a:hover {
-                    color: rgb(255, 255, 255);
-                    text-decoration: underline;
-                }
+            }
             `}</style>
 
             <header className="header">

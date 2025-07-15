@@ -23,7 +23,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
       <h2
         style={{
           textAlign: "center",
-          fontSize: "2rem", // 32px
+          fontSize: "2rem",
           marginTop: "0",
           color: "black",
         }}
@@ -36,7 +36,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
           display: "flex",
           justifyContent: "center",
           gap: "1rem",
-          marginBottom: "2rem", // 32px
+          marginBottom: "2rem",
           flexWrap: "wrap",
         }}
       >
@@ -47,8 +47,8 @@ export default function Showcase({ projects }: ShowcaseProps) {
             style={{
               border: "1px solid #ccc",
               borderRadius: "0.5rem",
-              width: "20rem", // bigger width
-              height:"30rem",
+              width: "20rem",
+              height: "30rem",
               backgroundColor: "white",
               boxShadow: "0 0.125rem 0.5rem rgba(0,0,0,0.1)",
               overflow: "hidden",
@@ -61,7 +61,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
             <img
               src={imageSrc}
               alt={title}
-              style={{ width: "100%", height: "17.25rem", objectFit: "cover" }} // 180px
+              style={{ width: "100%", height: "17.25rem", objectFit: "cover" }}
             />
             <div style={{ padding: "1rem", flexGrow: 1 }}>
               <h3 style={{ margin: "0 0 0.5rem 0" }}>{title}</h3>
@@ -72,7 +72,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
                 padding: "0 1rem 1rem 1rem",
                 display: "flex",
                 flexDirection: "column",
-                gap: "0.25rem", // 4px
+                gap: "0.25rem",
               }}
             >
               <a
@@ -108,10 +108,18 @@ export default function Showcase({ projects }: ShowcaseProps) {
 
       <style>{`
         .project-card:hover {
-          transform: translateY(-0.25rem); /* -4px */
-          box-shadow: 0 0.625rem 1rem rgba(0, 0, 0, 0.2); /* 0 10px 16px */
+          transform: translateY(-0.25rem);
+          box-shadow: 0 0.625rem 1rem rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 900px) {
+          .project-card {
+            width: 100% !important;
+            min-width: 0;
+            margin: 0 auto 1rem auto;
+            height: auto !important;
+          }
         }
       `}</style>
-    </div>
+	  </div>
   );
 }

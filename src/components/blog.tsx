@@ -114,6 +114,34 @@ export default function BlogPostContainer({title, desc, image1, image2, image3, 
           	display: flex;
           	align-items: flex-start;
         }
+
+            @media (max-width: 700px) {
+          .blog-container {
+            width: 100%;
+            max-width: 100vw;
+            padding: 1rem;
+          }
+          .blog-section {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.5rem;
+            font-size: 1rem;
+          }
+          .blog-section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+          }
+          .blog-body {
+            min-width: 0;
+          }
+          .blog-title {
+            font-size: 1.1rem;
+          }
+          .blog-desc {
+            font-size: 0.95rem;
+          }
+        }
       `}</style>
 
       <div className="blog-container">

@@ -37,73 +37,92 @@ export default function Hero({
     return (
         <>
             <style>{`
-                .hero { 
-                    display: flex;
-                    align-items: stretch;
-                    background: ${whiteBg ? "#fff" : "transparent"};
-                    width: 100vw;
-                    height: 500px;
-                    z-index: 1;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-                    /* Remove max-width and margin */
+            .hero {
+                display: flex;
+                align-items: stretch;
+                background: ${whiteBg ? "#fff" : "transparent"};
+                width: 100vw;
+                height: 500px;
+                z-index: 1;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            }
+            .hero-image-container {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-end;
+            }
+            .hero-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .hero-content {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 3rem;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .hero-title {
+                font-size: clamp(1.8rem, 2vw, 5rem);
+                font-weight: bold;
+                margin-bottom: 1rem;
+                color: #222;
+            }
+            .hero-text {
+                font-size: clamp(1.4rem, 2.0vw, 1.9rem);
+                color: #444;
+            }
+            .hero-text-gap {
+                margin-top: 1.0rem;
+            }
+            .hero-links {
+                display: flex;
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            .hero-link-icon {
+                color: #444;
+                font-size: 1.6rem;
+                transition: color 0.2s;
+            }
+            .hero-link-icon:hover {
+                color: #4856a3;
+            }
+
+            @media (max-width: 900px) {
+                .hero {
+                flex-direction: column;
+                height: auto;
+                min-height: 0;
                 }
-                .hero-image-container {
-                    width: 50%;
-                    height: 100%;
-                    display: flex;
-                    align-items: stretch;
-                    justify-content: flex-end;
+                .hero-image-container,
+                .hero-content {
+                width: 100%;
+                height: auto;
+                padding: 1.2rem 1rem;
                 }
                 .hero-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    display: block;
+                height: 220px;
+                border-radius: 1rem 1rem 0 0;
                 }
                 .hero-content {
-                    width: 50%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    padding: 3rem;
-                    box-sizing: border-box;
-                    font-family: Arial, Helvetica, sans-serif;
+                padding: 1.2rem 1rem;
                 }
-
                 .hero-title {
-                    font-size: clamp(1.8rem, 2vw, 5rem);
-                    font-weight: bold;
-                    margin-bottom: 1rem;
-                    color: #222;
+                font-size: 1.5rem;
                 }
-
-                .hero-text {
-                    font-size: clamp(1.4rem, 2.0vw, 1.9rem);
-                    color: #444;
-                }
-
-
-                .hero-text-gap {
-                    margin-top: 1.0rem; 
-                }
-
                 .hero-links {
-                    display: flex;
-                    gap: 1rem;
-                    margin-top: 0.5rem; 
+                margin-bottom: 1rem;
                 }
-
-                .hero-link-icon {
-                    color: #444;
-                    font-size: 1.6rem;
-                    transition: color 0.2s;
-                }
-
-                .hero-link-icon:hover {
-                    color: #4856a3;
-                }
+            }
             `}</style>
 
             <div className="hero">

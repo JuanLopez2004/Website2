@@ -39,6 +39,18 @@ export default function Footer() {
                         text-decoration: underline;
                         fade-in: 0.3s;
                   }
+
+                  @media (max-width: 900px) {
+                    .footer {
+                        padding: 0.5rem 0;
+                    }
+                    .footer-text {
+                        font-size: 1.1rem;
+                    }
+                    .footer-link {
+                        font-size: 1rem;
+                    }
+                    }
             `}</style>
 
             <footer className="footer">
