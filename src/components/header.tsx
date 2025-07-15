@@ -21,7 +21,7 @@ export default function Header() {
 
                 .header-container {
                     width: 100%;
-                    max-width: 1000px;
+                    max-width: 62.5rem;
                     margin: 0 auto;
                     display: flex;
                     align-items: center;
@@ -32,7 +32,7 @@ export default function Header() {
                 .header-nav {
                     display: flex;
                     align-items: center;
-                    height: 50px; 
+                    height: 80px; 
                 }
 				
 				.header-left {

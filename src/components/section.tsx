@@ -15,90 +15,92 @@ type IntroBodyProps = {
     link1Label?: string;
 };
 
-export default function Section({ title, content, content2, content3, imageSrc, altText, whiteBg,link1, link2, link3, link4, link1Label}: IntroBodyProps) {
+export default function Section({ title, content, content2, content3, imageSrc, altText, whiteBg, link1, link2, link3, link4, link1Label }: IntroBodyProps) {
     return (
         <>
-            <style>{`
-                .sectionbody {
-                    height: 200px;
-                    width: 100%;
-                    padding: 1rem 1rem;
-                    margin: 1rem auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background: ${whiteBg ? "#fff" : "#4856a3"};
-                    position: relative;
-                    z-index: 1;
-                    max-width: 1200px;
-                    transition: all 0.3s ease;
-                    border-radius: 8px;
-                    
-                }
+           <style>{`
+         .sectionbody {
+  width: 100%;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: ${whiteBg ? "#fff" : "transparent"};
+  position: relative;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1.5rem;
+  height: auto;
+}
 
-                .sectionbody:hover {
-                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-                    transform: translateY(-2px);
-                }
+.text-block {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
 
-                .section-image-wrapper {
-                    padding: 0;
-                    height: 100%;
-                    width: 25%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 6px;
-                    overflow: hidden;
-                }
+.section-title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
 
-                .section-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
+.section-paragraph {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  color: #444;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
 
-                .section-content {
-                    width: 72%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    padding-left: 1.2rem;
-                    box-sizing: border-box;
-                    color: white;
-                }
+.section-link {
+  margin-top: 0.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-                .section-title {
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    margin-bottom: 0.5rem;
-                    color: white;
-                }
+.section-link:hover {
+  color: #0056b3;
+}
 
-                .section-paragraph {
-                    margin-bottom: 1.2rem;
-                    font-size: 1.5rem;  
-                    line-height: 1.3;
-                    color: white;
-                    font-family: "Segoe UI", Arial, sans-serif;
-                }
+.section-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+}
 
-                .section-links a {
-                    display: inline-block;
-                    margin-right: 0.75rem;
-                    font-size: 0.9rem;
-                    color: #007bffff;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
+.section-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display: block;
+}
 
-                .section-links a:hover {
-                    color: #7390f7ff;
-                }
 
-            `}</style>
+        `}</style>
+
+
 
             <header className="sectionbody">
                 <div className="section-image-wrapper">

@@ -23,7 +23,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
       <h2
         style={{
           textAlign: "center",
-          fontSize: "2rem",
+          fontSize: "2rem", // 32px
           marginTop: "0",
           color: "black",
         }}
@@ -36,7 +36,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
           display: "flex",
           justifyContent: "center",
           gap: "1rem",
-          marginBottom: "2rem",
+          marginBottom: "2rem", // 32px
           flexWrap: "wrap",
         }}
       >
@@ -46,10 +46,11 @@ export default function Showcase({ projects }: ShowcaseProps) {
             className="project-card"
             style={{
               border: "1px solid #ccc",
-              borderRadius: 8,
-              width: 225,
+              borderRadius: "0.5rem",
+              width: "20rem", // bigger width
+              height:"30rem",
               backgroundColor: "white",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              boxShadow: "0 0.125rem 0.5rem rgba(0,0,0,0.1)",
               overflow: "hidden",
               display: "flex",
               flexDirection: "column",
@@ -60,7 +61,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
             <img
               src={imageSrc}
               alt={title}
-              style={{ width: "100%", height: 180, objectFit: "cover" }}
+              style={{ width: "100%", height: "17.25rem", objectFit: "cover" }} // 180px
             />
             <div style={{ padding: "1rem", flexGrow: 1 }}>
               <h3 style={{ margin: "0 0 0.5rem 0" }}>{title}</h3>
@@ -71,7 +72,7 @@ export default function Showcase({ projects }: ShowcaseProps) {
                 padding: "0 1rem 1rem 1rem",
                 display: "flex",
                 flexDirection: "column",
-                gap: "0.25rem",
+                gap: "0.25rem", // 4px
               }}
             >
               <a
@@ -107,8 +108,8 @@ export default function Showcase({ projects }: ShowcaseProps) {
 
       <style>{`
         .project-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+          transform: translateY(-0.25rem); /* -4px */
+          box-shadow: 0 0.625rem 1rem rgba(0, 0, 0, 0.2); /* 0 10px 16px */
         }
       `}</style>
     </div>

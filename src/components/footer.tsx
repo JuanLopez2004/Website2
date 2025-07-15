@@ -16,7 +16,7 @@ export default function Footer() {
                     z-index: 1;
               }
               .footer-text {
-                    font-size: 1.2rem;
+                    font-size: 1.7rem;
                     text-align: center;
               }
                 .footer-bottom {
@@ -26,7 +26,7 @@ export default function Footer() {
 
               .footer-link {
                     color: white;
-                    font-size: 1.1rem;
+                    font-size: 1.5rem;
                     text-decoration: none;
                     margin-top: 0.7rem;
               }

@@ -42,9 +42,10 @@ export default function Hero({
                     align-items: stretch;
                     background: ${whiteBg ? "#fff" : "transparent"};
                     width: 100%;
-                    max-width: 2800px;
+                    max-width: 2500px;
                     margin: 0 auto;
-                    height: 360px;
+                    height: auto;
+                    max-height: 500px;
                     z-index: 1;
                 }
 
@@ -65,27 +66,28 @@ export default function Hero({
 
                 .hero-content {
                     width: 55%;
-                    height: 100%;
+                    height: auto;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
-                    padding: 2rem;
+                    padding: 3rem;
                     box-sizing: border-box;
                     font-family: Arial, Helvetica, sans-serif;
                 }
 
                 .hero-title {
-                    font-size: 1.8rem;
+                    font-size: clamp(1.8rem, 2vw, 5rem);
                     font-weight: bold;
                     margin-bottom: 1rem;
                     color: #222;
                 }
 
                 .hero-text {
-                    font-size: 1.1rem;
+                    font-size: clamp(1.4rem, 2.0vw, 2rem);
                     color: #444;
                 }
+
 
                 .hero-text-gap {
                     margin-top: 1.0rem; 
