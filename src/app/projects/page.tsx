@@ -85,7 +85,7 @@ export default function Home() {
           	flex: 1,
           	display: 'flex',
           	flexDirection: 'column',
-          	paddingTop: '100px', 
+          	paddingTop: '120px', 
         	}}
       	></main>
 
