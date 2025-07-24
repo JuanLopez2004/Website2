@@ -1,30 +1,30 @@
 import React from "react";
 
 type IntroBodyProps = {
-    title: string;
-    content: string;
-    content2?: string;
-    content3?: string;
-    imageSrc: string;
-    altText: string;
-    whiteBg?: boolean;
-    link1?: string;
-    link2?: string;
-    link3?: string;
-    link4?: string;
-    link1Label?: string;
+	title: string;
+	content: string;
+	content2?: string;
+	content3?: string;
+	imageSrc: string;
+	altText: string;
+	whiteBg?: boolean;
+	link1?: string;
+	link2?: string;
+	link3?: string;
+	link4?: string;
+	link1Label?: string;
 };
 
 export default function Section({ title, content, content2, content3, imageSrc, altText, whiteBg, link1, link2, link3, link4, link1Label }: IntroBodyProps) {
-    return (
-        <>
-           <style>{`
-         	.sectionbody {
-        		width: 100%;
-              	margin: 1.5rem auto;
+	return (
+		<>
+		   <style>{`
+			.sectionbody {
+				width: 100%;
+				margin: 1.5rem auto;
 				display: flex;
-				align-items: flex-start;
-				justify-content: space-between;
+				align-items: center;
+				justify-content: center;
 				background: ${whiteBg ? "#fff" : "transparent"};
 				position: relative;
 				max-width: 1200px;
@@ -34,6 +34,22 @@ export default function Section({ title, content, content2, content3, imageSrc, 
 				gap: 1.5rem;
 				height: auto;
 				}
+				
+		   @media (max-width: 900px) {
+			 .sectionbody {
+			   flex-direction: column;
+			   width: 95%;
+			   max-width: 95%;
+			   margin: 1rem auto;
+			   padding: 1rem;
+			 }
+			 .text-block,
+			 .section-content,
+			 .section-title,
+			 .section-paragraph {
+				text-align: left !important;
+			 }
+		   }
 
 			.text-block {
 				width: 48%;
@@ -53,6 +69,13 @@ export default function Section({ title, content, content2, content3, imageSrc, 
 				font-weight: 700;
 				margin-bottom: 1rem;
 				color: #222;
+				transition: color 0.3s ease, text-shadow 0.3s ease;
+				cursor: default;
+				}
+
+			.section-title:hover {
+				color: #4856a3;
+				text-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
 				}
 
 			.section-paragraph {
@@ -63,6 +86,13 @@ export default function Section({ title, content, content2, content3, imageSrc, 
 				word-break: break-word;
 				font-family: Arial, Helvetica, sans-serif;
 				line-height: 1.5;
+				transition: color 0.3s ease, transform 0.2s ease;
+				cursor: default;
+				}
+
+			.section-paragraph:hover {
+				color: #4856a3;
+				transform: translateY(-2px);
 				}
 
 			.section-link {
@@ -75,7 +105,34 @@ export default function Section({ title, content, content2, content3, imageSrc, 
 				}
 
 			.section-link:hover {
-				color: #0056b3;
+				color: #4856a3;
+				}
+
+			.section-links {
+				margin-top: 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				align-items: center;
+				justify-content: center;
+				}
+
+			.section-links a {
+				display: inline-block;
+				padding: 0.5rem 1rem;
+				background-color: #4856a3;
+				color: white;
+				text-decoration: none;
+				border-radius: 0.5rem;
+				font-weight: 600;
+				transition: all 0.3s ease;
+				text-align: center;
+				}
+
+			.section-links a:hover {
+				background-color: #4856a3;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(72, 86, 163, 0.3);
 				}
 
 			.section-image-wrapper {
@@ -98,48 +155,46 @@ export default function Section({ title, content, content2, content3, imageSrc, 
 				}
 
 			@media (max-width: 900px) {
-				.sectionbody {
-					flex-direction: column;
-					padding: 1rem;
-					gap: 1rem;
-					max-width: 100%;
-				}
 				.text-block,
 				.section-content,
 				.section-image-wrapper {
-					width: 100% !important;
-					padding: 1rem !important;
-					min-width: 0;
+					width: 100%;
+					padding: 1rem;
+					text-align: center;
 				}
 				.section-image {
 					max-height: 180px;
+					margin: 0 auto;
+				}
+				.section-title {
+					text-align: center;
+				}
+				.section-paragraph {
+					text-align: center;
 				}
 				}
 
+		`}</style>
 
-        `}</style>
+			<header className="sectionbody">
+				<div className="section-image-wrapper">
+					<img src={imageSrc} alt={altText} className="section-image" />
+				</div>
 
+				<div className="section-content">
+					<h1 className="section-title">{title}</h1>
+					<p className="section-paragraph">{content}</p>
+					{content2 && <p className="section-paragraph">{content2}</p>}
+					{content3 && <p className="section-paragraph">{content3}</p>}
 
-
-            <header className="sectionbody">
-                <div className="section-image-wrapper">
-                    <img src={imageSrc} alt={altText} className="section-image" />
-                </div>
-
-                <div className="section-content">
-                    <h1 className="section-title">{title}</h1>
-                    <p className="section-paragraph">{content}</p>
-                    {content2 && <p className="section-paragraph">{content2}</p>}
-                    {content3 && <p className="section-paragraph">{content3}</p>}
-
-                    <div className="section-links">
-                        {link1 && <a href={link1}>{link1Label || "Link 1"}</a>}
-                        {link2 && <a href={link2}>Link 2</a>}
-                        {link3 && <a href={link3}>Link 3</a>}
-                        {link4 && <a href={link4}>Link 4</a>}
-                    </div>
-                </div>
-            </header>
-        </>
-    );
+					<div className="section-links">
+						{link1 && <a href={link1}>{link1Label || "Link 1"}</a>}
+						{link2 && <a href={link2}>Link 2</a>}
+						{link3 && <a href={link3}>Link 3</a>}
+						{link4 && <a href={link4}>Link 4</a>}
+					</div>
+				</div>
+			</header>
+		</>
+	);
 }

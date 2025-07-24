@@ -37,6 +37,8 @@ export default function SplitSection({
   link2Href,
   whiteBg,
 }: SplitSectionProps) {
+  const updatedContent1 = `${content1}`;
+
   return (
     <>
       <style>{`
@@ -44,38 +46,59 @@ export default function SplitSection({
   width: 100%;
   margin: 1.5rem auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   background: ${whiteBg ? "#fff" : "transparent"};
   position: relative;
   max-width: 1200px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 1rem;
   gap: 1.5rem;
   height: auto;
 }
-
 .text-block {
-  width: 48%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
   background-color: #f9f9f9;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
-
+@media (max-width: 900px) {
+  .sectionbody {
+    flex-direction: column;
+    width: 95%;
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  .text-block {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+}
+@media (min-width: 900px) {
+  .sectionbody {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .text-block {
+    width: 70%;
+  }
+}
 .section-title {
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 700;
   margin-bottom: 1rem;
   color: #222;
 }
-
 .section-paragraph {
   margin-bottom: 0.75rem;
   font-size: clamp(1rem, 1.8vw, 1.3rem);
@@ -85,7 +108,6 @@ export default function SplitSection({
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
-
 .section-link {
   margin-top: 0.5rem;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
@@ -94,37 +116,15 @@ export default function SplitSection({
   text-decoration: none;
   transition: color 0.2s ease;
 }
-
 .section-link:hover {
   color: #0056b3;
 }
-
-@media (max-width: 900px) {
-				.sectionbody {
-					flex-direction: column;
-					padding: 1rem;
-					gap: 1rem;
-					max-width: 100%;
-				}
-				.text-block,
-				.section-content,
-				.section-image-wrapper {
-					width: 100% !important;
-					padding: 1rem !important;
-					min-width: 0;
-				}
-				.section-image {
-					max-height: 180px;
-				}
-				}
-
-
-      `}</style>
+`}</style>
 
       <section className="sectionbody">
         <div className="text-block">
           <h2 className="section-title">{title1}</h2>
-          {content1 && <p className="section-paragraph">{content1}</p>}
+          {updatedContent1 && <p className="section-paragraph">{updatedContent1}</p>}
           {content2 && <p className="section-paragraph">{content2}</p>}
           {content5 && <p className="section-paragraph">{content5}</p>}
           {link1Text && link1Href && (
